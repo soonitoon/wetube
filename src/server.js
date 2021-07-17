@@ -18,13 +18,13 @@ const userRouter = express.Router();
 
 const handleEditUser = (req, res) => res.send("Edit User");
 
-userRouter.get("/users", handleEditUser);
+userRouter.get("/edit", handleEditUser);
 
 const videoRouter = express.Router();
 
 const handleWatchVideo = (req, res) => res.send("Watch Video");
 
-videoRouter.get("/videos", handleWatchVideo);
+videoRouter.get("/watch", handleWatchVideo);
 
 app.use("/", globalRouter);
 app.use("/users", userRouter);
