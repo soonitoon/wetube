@@ -8,6 +8,14 @@ const logger = morgan("dev");
 
 app.use(logger);
 
+const globalRouter = express.Router();
+const userRouter = express.Router();
+const videoRouter = express.Router();
+
+app.use("/", globalRouter);
+app.use("/users", userRouter);
+app.use("/videos", videoRouter);
+
 const handleListening = () => {
     console.log(`Server listening on http://localhost:${PORT}`);
 }
