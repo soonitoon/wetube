@@ -1,3 +1,1 @@
-const join = (req, res) => res.send("Join");
-
-export default join;
+export const join = (req, res) => res.send("Join");
