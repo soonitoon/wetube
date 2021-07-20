@@ -5,16 +5,6 @@ html(lang="ko")
         title #{pageTitle} | Wetube
     body
         header
-            if fakeUser.loggedIn
-                small Hello #{fakeUser.userName} 
-            nav
-                ul
-                    if fakeUser.loggedIn
-                        li
-                            a(href="/login") Logout
-                    else
-                        li
-                            a(href="/login") Login
             h1=pageTitle
         main
             block content
