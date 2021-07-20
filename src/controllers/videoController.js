@@ -1,5 +1,30 @@
 export const trending = (req, res) => {
-  const videos = [];
+  const videos = [
+    {
+      title: "Soonitoon's video",
+      rating: 5,
+      comments: 43,
+      createdAt: "2 minuites ago",
+      views: 89,
+      id: 1,
+    },
+    {
+      title: "Second video",
+      rating: 5,
+      comments: 43,
+      createdAt: "2 minuites ago",
+      views: 89,
+      id: 1,
+    },
+    {
+      title: "Third video",
+      rating: 5,
+      comments: 43,
+      createdAt: "2 minuites ago",
+      views: 89,
+      id: 1,
+    },
+  ];
   res.render("home", {
     pageTitle: "Home",
     videos,
