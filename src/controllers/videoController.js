@@ -20,7 +20,7 @@ let videos = [
     rating: 5,
     comments: 43,
     createdAt: "2 minuites ago",
-    views: 89,
+    views: 1,
     id: 3,
   },
 ];
@@ -35,6 +35,7 @@ export const see = (req, res) => {
   const video = videos[id - 1];
   return res.render("watch", {
     pageTitle: `Watching ${video.title}`,
+    video,
   });
 };
 export const edit = (req, res) => {
