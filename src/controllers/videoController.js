@@ -47,6 +47,3 @@ export const getEdit = (req, res) => {
   });
 };
 export const postEdit = (req, res) => {};
-export const search = (req, res) => res.send("Search");
-export const upload = (req, res) => res.send("upload");
-export const deleteVideo = (req, res) => res.send("deleteVideo");
