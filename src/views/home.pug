@@ -2,7 +2,6 @@ extends base.pug
 include mixins/video
 
 block content
-    h2 welcome to trending video!!
     each info in videos
         +video(info)
     else 
