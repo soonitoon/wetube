@@ -1,7 +1,16 @@
-export const home = (req, res) => {
-  return res.render("home", {
-    pageTitle: "Home",
-  });
+import Video from "../models/video";
+
+export const home = async (req, res) => {
+  try {
+    const videos = await Video.find({});
+    console.log(videos);
+    return res.render("home", {
+      pageTitle: "Home",
+      videos,
+    });
+  } catch (error) {
+    return res.render(error);
+  }
 };
 
 export const watch = (req, res) => {
