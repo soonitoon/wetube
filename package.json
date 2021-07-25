@@ -7,7 +7,7 @@
     "url": "git+https://github.com/soonitoon/wetube.git"
   },
   "scripts": {
-    "dev": "nodemon --exec babel-node src/server"
+    "dev": "nodemon --exec babel-node src/init"
   },
   "author": "Hyuno Choi",
   "license": "MIT",
