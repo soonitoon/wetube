@@ -30,7 +30,7 @@ export const trending = (req, res) => {
     videos,
   });
 };
-export const see = (req, res) => {
+export const watch = (req, res) => {
   const { id } = req.params;
   const video = videos[id - 1];
   return res.render("watch", {
