@@ -38,9 +38,8 @@ const videoSchema = new mongoose.Schema({
   },
 });
 
-// Important: Before save!
-videoSchema.pre("save", async function () {
-  this.hashtags = this.hashtags[0]
+videoSchema.static("formatHashtags", function (hashtags) {
+  return hashtags
     .split(",")
     .map((word) => (word.startsWith("#") ? word : `#${word}`));
 });
