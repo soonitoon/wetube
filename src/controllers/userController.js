@@ -37,7 +37,15 @@ export const getLogin = (req, res) =>
   res.render("login", {
     pageTitle: "Login",
   });
-export const postLogin = (req, res) => {
+export const postLogin = async (req, res) => {
+  const { username, password } = req.body;
+  const exists = await User.exists({ username });
+  if (!exists) {
+    return res.status(400).render("login", {
+      pageTitle: "Login",
+      errorMessage: "An accounr with this username does not exists.",
+    });
+  }
   // check account is exists
   // check password is correct.
   res.end();
